@@ -1,0 +1,18 @@
+procedure insertion_Sort(int T[]) 
+  {
+    let n = T.length;
+        for (let i = 1; i < n; i++)
+          {
+            // prendre le premier elt de notre liste des cards
+            let elt = T[i];
+            // placer j sur le dernier elt du tableau
+            let j = i-1; 
+            // on va changer les position et mettre dans l'ordre
+            while ((j > -1) && (elt < T[j])) {
+                T[j+1] = T[j];
+                j--;
+            }
+            T[j+1] = elt;
+        }
+    return T;
+}
